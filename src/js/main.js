@@ -90,6 +90,14 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
+var layers = [];
+for (var providerId in providers) {
+    layers.push(providers[providerId]);
+}
+
+
+var ctrl = L.control.iconLayers(layers).addTo(map);
+
 
 var layer = L.dataClassification(HydroData, {
     style: { radius: 7 },
