@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // $('#myModal').modal('show')
+    $('#myModal').modal('show')
     $('#mailbutton').click(function (event) {
         window.location = "mailto:h.marzouk@uni-muenster.de";
     });
@@ -100,7 +100,7 @@ var layer = L.dataClassification(HydroData, {
     colorRamp: 'YlOrRd',
     classRounding: 2,
     legendTitle: 'Temperature °C',
-    legendFooter: '(as of 24 April 2024)',
+    legendFooter: 'lase April 2024)',
     legendPosition: 'topright',
 
     onEachFeature: (feature, layer) => {
