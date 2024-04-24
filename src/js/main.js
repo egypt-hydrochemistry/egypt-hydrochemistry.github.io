@@ -100,7 +100,7 @@ var layer = L.dataClassification(HydroData, {
     colorRamp: 'YlOrRd',
     classRounding: 2,
     legendTitle: 'Temperature °C',
-    legendFooter: 'lase April 2024)',
+    legendFooter: 'updated: April 2024',
     legendPosition: 'topright',
 
     onEachFeature: (feature, layer) => {
