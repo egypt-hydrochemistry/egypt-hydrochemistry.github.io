@@ -100,17 +100,25 @@ var ctrl = L.control.iconLayers(layers).addTo(map);
 
 
 var layer = L.dataClassification(HydroData, {
-    style: { radius: 7 },
-    mode: 'jenks',
-    classes: 5,
+    style: {
+        radius: 6, fillOpacity: 0.7,       // polygon fill opacity in polygon modes
+    },
+    mode: 'manual',
+    classes: [23, 26, 34, 37, 41, 42, 44, 47, 52, 61],
     field: 'Temperatur',
     pointMode: 'color',
-    colorRamp: 'YlOrRd',
-    classRounding: 2,
+    colorRamp: 'RdYlGn',
     legendTitle: 'Temperature °C',
     legendFooter: 'updated: April 2024',
     legendPosition: 'topright',
-
+    reverseColorRamp: true,
+    classRounding: 1,
+    legendTemplate: {
+        highest: '{low} - 87',
+        middle: '{low} - {high}',
+        lowest: '{low} - {high}',
+        nodata: 'No data'
+    },
     onEachFeature: (feature, layer) => {
         if (feature.properties) {
             const rows = Object.keys(feature.properties)
