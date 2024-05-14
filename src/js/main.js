@@ -105,7 +105,7 @@ var layer = L.dataClassification(HydroData, {
     },
     mode: 'manual',
     classes: [23, 26, 34, 37, 41, 42, 44, 47, 52, 61],
-    field: 'Temperatur',
+    field: 'Temperature',
     pointMode: 'color',
     colorRamp: 'RdYlGn',
     legendTitle: 'Temperature °C',
